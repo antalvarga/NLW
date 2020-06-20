@@ -1,0 +1,78 @@
+/* raiz aula 1 1:19:42 */
+:root {
+    --title-color: #322153;
+    --primary-color: #34cb79;
+}
+
+/* Para qualquer obj (elemento html)
+ aula=1 / 1:28:51*/
+
+* {
+    margin: 0;
+    padding: 0;
+
+    /* comportamento de preenchimento da caixa */
+    box-sizing: border-box;
+}
+
+
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 
+0:44:00
+BOX MODEL
+
+Modelo de caixa
+toda caixa tem
+largura, altura, espaçamento, preenchimentos
+bordas, cor, fundo,
+maneira que é vista (display),
+alinhamentos
+
+*/
+/*
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* class */
+/*
+.red {
+    background-color: red;
+}
+
+.content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+*/
+/* aula: 1:03:00*/
+body {
+    background: #87CEFA; /* #f0f0f5; */
+    /*Aula1 / 1:33:50*/
+    -webkit-font-smoothing: antialiased;
+}
+
+/* retirar o sub-linhado de todos os objetos "a"   */
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--title-color);
+}
+
+/* Aula 2 / 0:05:02 todas as configuraçoes do #page-home foram transferidas para o home.css   */
+
+/*  Aula 1/ 1:50:26 - Aplicar regras  qd a tela for reduzida até 900 px
+@media (max-width: 900px) {
+
+
+Aula 2/ 0:03:51 foi criado o arquivo  responsive.css e este conteúdo foi transferido pra lá
+*/

@@ -1,0 +1,61 @@
+
+
+/*  Aula 1/ 1:50:26 - Aplicar regras  qd a tela for reduzida até 900 px */
+@media (max-width: 900px) {
+    #page-home {
+        /* a imagem só aparece com a tela cheia*/
+        background-position-x: 70vw;
+
+    }
+
+    #page-home .content {
+        align-items: center;
+        text-align: center;
+    }
+
+    #page-home header a {
+        position: absolute;
+        bottom: 48px;
+
+        left: 50%;
+        /*  Aula1 / 1:55:13   */
+        /* Achar o ponto médio para centralizar  */
+        transform: translateX();
+    }
+
+    #page-home main {
+        align-items: center;
+    }
+
+    /* Aplicar 1 coluna para testar a responsividade */
+    #page-search-results .cards {
+        grid-template-columns: 1fr;
+    }
+
+    #page-search-results .cards img {
+        height: 250px;
+    }
+
+    /* Aula4 - 1:50:29 =  */
+    #page-create-point .field-group {
+        flex-direction: column;
+    }
+
+    #page-create-point .field-group .field + .field {
+        margin-left: 0;
+    }
+
+}
+
+@media (min-width: 1700px) {
+    #page-home {
+        background-position-x: 40vw;
+
+    }
+}
+
+@media (max-height: 760px) {
+    #page-home {
+        background-position-y: 200px;
+    }
+}

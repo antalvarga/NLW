@@ -1,0 +1,179 @@
+
+<!-- Aula4 - 1:23:40 -->
+{% extends "layout.html" %}
+
+<!-- Aula4 - 1:30:24 = Criar variavel no nunjucks
+     O imbecil trocou o nome da variavel em 1:36:00
+-->
+{% set pageId = "page-home" %}
+<!--
+
+ *** enviado para o layout.html
+
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+-->
+
+
+    <!-- *** Repare que o title que está sendo usado é o que está no layout -->
+    <title>Ecoleta</title>
+    <!-- Poderiamos retirar a tag title daqui. Deixando apenas no layout.html -->
+
+
+<!--
+
+ *** enviado para o layout.html
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+-->
+
+    <!-- Aula 4 - 1:40:00 -->
+
+    {% block styles %}
+        <link rel="stylesheet" href="/styles/home.css">
+        <link rel="stylesheet" href="/styles/modal.css">
+    {% endblock styles %} 
+
+
+    
+<!--
+
+ *** enviado para o layout.html
+
+    <link rel="stylesheet" href="/styles/responsive.css">
+</head>
+<body>
+--> 
+    {# comentario no nunjuks #}    
+
+
+    <!-- aula 1:03:00 -->
+    <!-- <div id="page-home"> -->
+    {# Aula4 - 1:29:29 = enviar um ID para substituir o id = "page-home"#}
+
+
+    {%block content%}
+
+        <div class="content">         
+
+            <header>
+                <!-- <h3 class="red">Ecoleta</h3> -->
+                <img src="/assets/logo.svg" alt="Logomarca">
+                
+                <!-- <a href="./create-point.html" > 
+                Alterada na aula 4 - 56:45
+                -->
+                <a href="create-point" >
+                    <span></span>
+                    Cadastre seu ponto de coleta
+                </a> 
+            </header>
+                
+            <!-- Aula 1:18:14 -->
+            <main>
+                <h1 class="red">Seu marketplace de coleta de resíduos</h1>
+
+                <!-- Opçao abaixo so estara disponivel com o nunjucks
+                Aula4 - 1:05:41
+                Será enviada dinamicamente pelo server.js 
+                -->
+                <h1>{{ title }}</h1>
+        
+                <p>
+                    Ajudamos pessoas a encontrarem pontos de coleta de forme eficiente
+                </p>    
+                
+                <!-- Aula1 / 1:35:54 
+                <button>Pesquisar ponto de coleta</button>    
+                -->
+                
+                <!--
+                Aula 1 / 1:47:12
+                <a href="#"><span></span> ponto de coleta</a> 
+                -->
+                <a href="#"><span></span><strong>Pesquisar pontos de coleta</strong></a>
+                <!-- Quando o usuario clicar neste botao o javascript vai retirar a classe hide da div modal 
+                    e qd clicar no "x" vai inserir novamente 
+                
+                -->
+            </main>
+        
+        </div>
+    
+    {%endblock content%}
+
+    {% block modal %}
+        {% include "partials/modal.html" %}
+    {% endblock modal %}
+
+            
+    <!-- </div> -->
+
+    <!-- aula 3 0:58:30 
+    
+    . Para criar div
+    #modal ENTER
+    
+    . Para criar div com a classe
+    .header ENTER
+
+    . Para criar uma div com duas classes
+    .search.field ENTER
+    -->
+
+<!-- 
+    A div modal foi transferida para ./partials/modal.html
+
+    <div id="modal" class="hide">
+        <div id="content">
+            <div class="header">
+                <h1>Pontos de coleta</h1>
+                <a href="#">Fechar</a>
+            </div>
+            
+            ### *** Diz para que pagina eu vou apos a execucao    
+            ### <form action="./search-results.html"> 
+            ### 
+            ### <form action="./search-results.html"> 
+            ### Aula4 
+            
+            <form action="search-results">
+
+                <label for="search">Cidade</label>
+                <div class="search field">
+                    <input type="text" name="search"
+                           placeholder="Digite a Cidade">
+                    <button>
+                        <img src="/assets/search.svg" alt="Buscar">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div> -->
+
+    <!-- {% include "partials/modal.html" %}
+    Aula4 1:34:02
+    Transferido para após o block content
+    -->
+
+
+    {% block scripts %}
+        <script src="scripts/index.js"></script>
+    {% endblock scripts %}
+
+
+
+
+<!--
+
+ *** enviado para o layout.html
+    
+</body>
+</html>
+
+-->
